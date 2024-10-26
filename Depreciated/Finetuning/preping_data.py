@@ -1,6 +1,6 @@
 # Prep data to be in two files
 import os
-import random
+import secrets
 
 
 
@@ -30,7 +30,7 @@ with open(train_file_name, "w") as train_file:
                 # Iterate over all data in the file
                 for line in f:
                     # Get a random number between 0 and 1
-                    num = random.uniform(0, 1)
+                    num = secrets.SystemRandom().uniform(0, 1)
                     
                     # If the number is greater than the test size,
                     # add it to the train data
